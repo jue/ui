@@ -58,14 +58,19 @@
           <div class="h-7 flex items-center cursor-pointer relative" @mouseenter="showTooltip(item)"
             @mouseleave="hideTooltip" @click="item.expandable !== false && toggleSection(item.title)">
 
-            <div class="flex-1 transition-all duration-300 px-3"
-              :class="[isExpanded ? 'opacity-100' : 'opacity-0 w-0']">
-              <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">{{ item.title }}</span>
+            <div class="flex-1 transition-all duration-300 overflow-hidden"
+              :class="[isExpanded ? 'opacity-100 px-3' : 'opacity-0 w-0 px-0']">
+              <span class="text-xs font-medium text-gray-400 uppercase tracking-wider whitespace-nowrap">{{ item.title
+                }}</span>
             </div>
-            <div :class="[' flex items-center justify-center flex-shrink-0', item.expandable ? 'w-10' : 'w-3']">
+            <div :class="[' flex items-center justify-center flex-shrink-0 w-10']">
               <ChevronRight v-if="item.expandable !== false"
                 class="w-4 h-4 text-gray-400 transition-transform duration-300"
                 :class="[expandedSections[item.title] ? 'rotate-90' : '']" />
+              <template v-else>
+                <Minus v-if="!isExpanded" class="w-4 h-4 text-gray-400 transition-transform duration-300"
+                  :class="[expandedSections[item.title] ? 'rotate-90' : '']" />
+              </template>
             </div>
           </div>
           <div class="overflow-hidden">
