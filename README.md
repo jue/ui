@@ -1,4 +1,4 @@
-# BimGo UI Components
+# Jue UI Components
 
 基于 Vue 3 和 Tailwind CSS 的现代化 UI 组件库。
 
@@ -19,13 +19,13 @@
 ## 安装
 
 ```bash
-npm install @bimgo/ui-components
+npm install @jue/ui-components
 ```
 
 ## 使用
 
 ```vue
-import { Sidebar, Menu } from '@bimgo/ui-components'
+import { Sidebar, Menu } from '@jue/ui-components'
 ```
 
 ## 文档

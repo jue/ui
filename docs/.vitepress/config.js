@@ -1,7 +1,7 @@
 export default {
-  title: 'BimGo Documentation',
-  description: 'BimGo 项目文档',
-  base: '/xian-bimgo/',
+  title: 'Jue UI Documentation',
+  description: 'Jue 项目文档',
+  base: '/ui/',
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
@@ -18,7 +18,7 @@ export default {
       },
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/xian-bimgo' },
+      { icon: 'github', link: 'https://github.com/jue/ui' },
     ],
   },
 }
